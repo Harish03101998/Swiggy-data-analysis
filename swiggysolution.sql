@@ -30,7 +30,7 @@ select city, avg(rating) as average_rating
 from swiggy group by city;
 
 #Q6 WHAT IS THE HIGHEST PRICE OF ITEM UNDER THE 'RECOMMENDED' MENU
-CATEGORY FOR EACH RESTAURANT?
+CATEGORY FOR EACH RESTAURANT
 select distinct restaurant_name,
 menu_category,max(price) as highestprice
 from swiggy where menu_category='Recommended'
