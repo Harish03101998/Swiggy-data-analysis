@@ -1,12 +1,12 @@
 use swiggy;
 
-#Q1
+#Q1 HOW MANY RESTAURANTS HAVE A RATING GREATER THAN 4.5?
 select count(distinct restaurant_name) 
 as high_rated_restaurants
 from swiggy
 where rating>4.5;
 
-#Q2
+#Q2 WHICH IS THE TOP 1 CITY WITH THE HIGHEST NUMBER OF RESTAURANTS?
 select city,count(distinct restaurant_name) 
 as restaurant_count from swiggy
 group by city
