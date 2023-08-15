@@ -13,23 +13,24 @@ group by city
 order by restaurant_count desc
 limit 1;
 
-#Q3
+#Q3 HOW MANY RESTAURANTS HAVE THE WORD "PIZZA" IN THEIR NAME?
 select count(distinct restaurant_name) as pizza_restaurants
 from swiggy 
 where restaurant_name like '%Pizza%';
 
-#Q4
+#Q4 WHAT IS THE MOST COMMON CUISINE AMONG THE RESTAURANTS IN THE DATASET?
 select cuisine,count(*) as cuisine_count
 from swiggy
 group by cuisine
 order by cuisine_count desc
 limit 1;
 
-#Q5
+#Q5 WHAT IS THE AVERAGE RATING OF RESTAURANTS IN EACH CITY?
 select city, avg(rating) as average_rating
 from swiggy group by city;
 
-#Q6
+#Q6 WHAT IS THE HIGHEST PRICE OF ITEM UNDER THE 'RECOMMENDED' MENU
+CATEGORY FOR EACH RESTAURANT?
 select distinct restaurant_name,
 menu_category,max(price) as highestprice
 from swiggy where menu_category='Recommended'
